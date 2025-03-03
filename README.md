@@ -8,21 +8,33 @@ This project is a frontend application for AI block software development, simila
 
 ## Building the Docker Image
 
-To build the Docker image for this project, run the following command in the root directory of the project:
+To build the Docker image for the frontend, run the following command in the root directory of the project:
 
 ```sh
-docker build -t ai-block-software-dev .
+docker build -t ai-block-software-dev -f Dockerfile .
+```
+
+To build the Docker image for the backend, run the following command in the `backend` directory:
+
+```sh
+docker build -t ai-block-backend -f Dockerfile .
 ```
 
 ## Running the Docker Container
 
-To run the Docker container, use the following command:
+To run the Docker container for the frontend, use the following command:
 
 ```sh
 docker run -p 5000:5000 ai-block-software-dev
 ```
 
-This will start the application and make it accessible at `http://localhost:5000`.
+To run the Docker container for the backend, use the following command:
+
+```sh
+docker run -p 4000:4000 ai-block-backend
+```
+
+This will start the frontend application and make it accessible at `http://localhost:5000`, and the backend service at `http://localhost:4000`.
 
 ## Development
 
