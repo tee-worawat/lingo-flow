@@ -30,16 +30,10 @@ const { findNode, nodes, addNodes, addEdges, project, vueFlowRef, onConnect, set
     nodes: [
       {
         id: '1',
-        type: 'start',
-        label: 'start',
+        type: 'LLM',
+        label: 'LLM',
         position: { x: 25, y: 400 }
       },
-      {
-        id: '2',
-        type: 'end',
-        label: 'end',
-        position: { x: 1000, y: 400 }
-      }
     ]
   })
 
