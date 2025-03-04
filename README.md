@@ -1,55 +1,92 @@
 # AI Block Software Development
 
-This project is a frontend application for AI block software development, similar to NodeRED for IoT developments. Each block provides the concept of functionalities, and developers write prompts instead of actual code. The code is generated based on those prompts and then performs input/output calls to the connected blocks.
+This project is a full-stack application with a Vue.js frontend and a Django backend. The frontend allows developers to create AI blocks using prompts, and the backend handles the processing and data management.
+
+## Tech Stack
+### Backend
+- Django
+- Django REST framework
+
+### Frontend
+- Vue.js
+- Vue CLI
 
 ## Prerequisites
 
-- Docker
+- Node.js (version 14 or higher)
+- npm (version 6 or higher)
+- Python (version 3.8 or higher)
 
-## Building the Docker Image
+## Setup Instructions
 
-To build the Docker image for the frontend, run the following command in the root directory of the project:
+### Backend Setup
+1. Navigate to the backend directory:
+   ```sh
+   cd /Users/worawatlawanont/task_repo/ai_block_software_dev/backend
+   ```
+2. Create a virtual environment:
+   ```sh
+   python -m venv venv
+   ```
+3. Activate the virtual environment:
+   - On Windows:
+     ```sh
+     venv\Scripts\activate
+     ```
+   - On macOS/Linux:
+     ```sh
+     source venv/bin/activate
+     ```
+4. Install dependencies:
+   ```sh
+   pip install -r requirements.txt
+   ```
+5. Apply migrations:
+   ```sh
+   python manage.py migrate
+   ```
+6. Start the development server:
+   ```sh
+   python manage.py runserver
+   ```
 
-```sh
-docker build -t ai-block-software-dev -f Dockerfile .
-```
-
-To build the Docker image for the backend, run the following command in the `backend` directory:
-
-```sh
-docker build -t ai-block-backend -f Dockerfile .
-```
-
-## Running the Docker Container
-
-To run the Docker container for the frontend, use the following command:
-
-```sh
-docker run -p 5000:5000 ai-block-software-dev
-```
-
-To run the Docker container for the backend, use the following command:
-
-```sh
-docker run -p 4000:4000 ai-block-backend
-```
-
-This will start the frontend application and make it accessible at `http://localhost:5000`, and the backend service at `http://localhost:4000`.
+### Frontend Setup
+1. Navigate to the frontend directory:
+   ```sh
+   cd /Users/worawatlawanont/task_repo/ai_block_software_dev/frontend
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the development server:
+   ```sh
+   npm run serve
+   ```
 
 ## Development
 
 For development purposes, you can run the application locally using the following commands:
 
+### Backend
 1. Install dependencies:
-
-    ```sh
-    npm install
-    ```
-
+   ```sh
+   pip install -r requirements.txt
+   ```
 2. Start the development server:
+   ```sh
+   python manage.py runserver
+   ```
 
-    ```sh
-    npm start
-    ```
+### Frontend
+1. Install dependencies:
+   ```sh
+   npm install
+   ```
+2. Start the development server:
+   ```sh
+   npm run serve
+   ```
 
-This will start the application and make it accessible at `http://localhost:3000`.
+## License
+This project is licensed under the MIT License.
