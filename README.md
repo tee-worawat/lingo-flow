@@ -1,4 +1,4 @@
-# AI Block Software Development
+# Lingo Flow Software Development
 
 This project is a full-stack application with a Vue.js frontend and a Django backend. The frontend allows developers to create AI blocks using prompts, and the backend handles the processing and data management.
 
@@ -14,40 +14,31 @@ This project is a full-stack application with a Vue.js frontend and a Django bac
 ## Prerequisites
 
 - Node.js (version 14 or higher)
-- npm (version 6 or higher)
-- Python (version 3.8 or higher)
+- pnpm (version 6 or higher) see -> https://pnpm.io/installation
+- Python (version 3.8 or higher) and uv ->  https://docs.astral.sh/uv/getting-started/installation/
+
+*** Both `pnpm` and `uv` are available with homebrew
 
 ## Setup Instructions
 
 ### Backend Setup
+These steps create a django backend with sqlite database to serve Vue app frontend
 1. Navigate to the backend directory:
    ```sh
    cd /Users/worawatlawanont/task_repo/ai_block_software_dev/backend
    ```
-2. Create a virtual environment:
+2. Install dependencies:
    ```sh
-   python -m venv venv
+   uv sync
+   uv lock
    ```
-3. Activate the virtual environment:
-   - On Windows:
-     ```sh
-     venv\Scripts\activate
-     ```
-   - On macOS/Linux:
-     ```sh
-     source venv/bin/activate
-     ```
-4. Install dependencies:
+3. Apply migrations:
    ```sh
-   pip install -r requirements.txt
+   uv run python manage.py migrate
    ```
-5. Apply migrations:
+4. Start the development server:
    ```sh
-   python manage.py migrate
-   ```
-6. Start the development server:
-   ```sh
-   python manage.py runserver
+   uv run python manage.py runserver
    ```
 
 ### Frontend Setup
@@ -57,36 +48,14 @@ This project is a full-stack application with a Vue.js frontend and a Django bac
    ```
 2. Install dependencies:
    ```sh
-   npm install
+   pnpm install
    ```
 3. Start the development server:
    ```sh
-   npm run serve
-   ```
-
-## Development
-
-For development purposes, you can run the application locally using the following commands:
-
-### Backend
-1. Install dependencies:
-   ```sh
-   pip install -r requirements.txt
-   ```
-2. Start the development server:
-   ```sh
-   python manage.py runserver
-   ```
-
-### Frontend
-1. Install dependencies:
-   ```sh
-   npm install
-   ```
-2. Start the development server:
-   ```sh
-   npm run serve
+   pnpm run dev
    ```
 
 ## License
 This project is licensed under the MIT License.
+
+Frontend license credited to https://github.com/MonsterPi13/chatBot-workflow/tree/master?tab=readme-ov-file#getting-started
