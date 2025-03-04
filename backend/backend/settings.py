@@ -54,7 +54,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:8080',  # Adjust the port if your Vue.js app runs on a different port
+    'http://localhost:5173',  # Adjust the port if your Vue.js app runs on a different port
 ]
 
 ROOT_URLCONF = 'backend.urls'
