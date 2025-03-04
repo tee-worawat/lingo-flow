@@ -6,7 +6,8 @@ authors = [{name = "Worawat Lawanont", email = "worawat.law@gmail.com"}]
 dependencies = [
     "Django >=3.2",
     "djangorestframework >=3.12",
-    "django-cors-headers >=3.7"
+    "django-cors-headers >=3.7",
+    "requests >=2.25"
 ]
 
 [tool.poetry]

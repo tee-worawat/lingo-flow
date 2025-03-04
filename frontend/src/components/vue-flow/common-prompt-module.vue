@@ -20,7 +20,7 @@ const fetchData = async () => {
 
 const saveData = async () => {
   try {
-    const node = { prompt: data.value }
+    const node = { name: 'Default Name', prompt: data.value }
     const response = await api.createNode(node)
     console.log('Data saved:', response.data)
     // Process the saved data as needed
@@ -63,7 +63,6 @@ fetchData()
           v-model="data"
         />
         <button @click="saveData">Save</button>
-        <button @click="fetchData">Fetch</button>
       </collapsible-content>
     </Collapsible>
   </div>
