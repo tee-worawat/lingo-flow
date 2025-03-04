@@ -1,4 +1,4 @@
-# AI Block Software Development
+# Lingo Flow Software Development
 
 This project is a full-stack application with a Vue.js frontend and a Django backend. The frontend allows developers to create AI blocks using prompts, and the backend handles the processing and data management.
 
@@ -57,3 +57,5 @@ These steps create a django backend with sqlite database to serve Vue app fronte
 
 ## License
 This project is licensed under the MIT License.
+
+Frontend license credited to https://github.com/MonsterPi13/chatBot-workflow/tree/master?tab=readme-ov-file#getting-started
